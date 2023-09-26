@@ -23,7 +23,7 @@ test('renders "Changed!" if the button was Clicked', () => {
     const buttonElement = screen.getByRole("button");
     // Step-3 ASSERT
     userEvent.click(buttonElement);
-    const outputElement = screen.getByText("Changed");
+    const outputElement = screen.getByText("Changed",{exact:false});
     expect(outputElement).toBeInTheDocument();
 });
 
